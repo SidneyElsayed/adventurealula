@@ -1,0 +1,818 @@
+/* 
+    Colors:
+    Initial:
+    Dark Brown: #231008
+    Medium Brown: #784D2D
+    Light Brown: #CBA07A
+
+    DARK Blue: #203940
+    Blue: #335C67
+    LIGHT Blue: #5397a9
+
+    MUSTARD Yellow: #ebc700
+    Light Tan: #FFF3B0
+
+    Medium Tan: #E09F3E
+
+    LIGHT Accent Red: #bd3233
+    Accent Red: #9E2A2B
+    DARK Accent Red: #511516
+
+    Dark Red: #540B0E
+    
+
+
+*/
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+[class*="grid-"], [class*="grid_"], [class~="grid"] {margin:0; }
+
+[class*=col-] {
+    padding: 0;
+  }
+
+/* ---------- Temporary styles for structural html -------------- */
+
+
+/* Universal Styles and Utility Classes */
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    color:rgb(0, 0, 0);
+}
+
+.padded-sm      {  padding: 2.5%;    }
+.padded         {  padding: 5%;      }
+.padded-lg      {  padding: 10%;     }
+.padded-05      {  padding: 0.5rem;  }
+.padded-1       {  padding: 1rem;    }
+.padded-2       {  padding: 2rem;    }
+
+.bg-dark{
+    background-color: #540B0E;
+    color: white;
+}
+
+.bg-medium{
+    background-color: #E09F3E;
+    color: white;
+}
+
+.bg-blue{
+    background-color: #387382;
+    color: white;
+}
+
+.bg-red{
+    background-color: #9E2A2B;
+    color: white;
+}
+
+.bg-light{
+    background-color: #FFF3B0;
+    color: #231008;
+}
+
+.padding-l-0  {  padding-left: 0;         }
+.padding-r-0  {  padding-right: 0;        }
+.padding-t-0  {  padding-top: 0;          }
+.padding-b-0  {  padding-bottom: 0;       }
+
+.padding-l-1  {  padding-left: 1;         }
+.padding-r-1  {  padding-right: 1;        }
+.padding-t-1  {  padding-top: 1;          }
+.padding-b-1  {  padding-bottom: 1;       }
+
+.padding-b-2  {  padding-bottom: 2rem;  }
+.padding-t-2  {  padding-top: 2rem;     }
+
+.margin-l-1  {  margin-left: 1rem;         }
+.margin-r-1  {  margin-right: 1rem;        }
+.margin-t-1  {  margin-top: 1rem;          }
+.margin-b-1  {  margin-bottom: 1rem;       }
+
+.capped-width { max-width: 1100px; margin: auto; }
+
+.tall-30         { min-height: 30vh; }
+.tall-40         { min-height: 40vh; }
+.tall-50         { min-height: 50vh; }
+.tall-60         { min-height: 60vh; }
+.tall-70         { min-height: 70vh; }
+.tall-80         { min-height: 80vh; }
+.tall-90         { min-height: 90vh; }
+.tall-100        { min-height: 100vh; }
+
+/* ------------------------------- Typography Styles -------------------------- */
+
+.featured-text-dark        { color: #540B0E; }
+.featured-text-red         { color: #9E2A2B; }
+.featured-text-medium      { color: #E09F3E; }
+.featured-text-blue        { color: #335C67; }
+.featured-text-light-blue  { color: #5397a9; }
+.featured-text-light       { color: #FFF3B0; }
+
+.featured-text-body        { color:rgb(0, 0, 0); }
+.white-text                { color: white;   }
+
+.left     {  text-align: left;     }
+.right    {  text-align: right;    }
+.center   {  text-align: center;   }
+
+.font-weight-light       { font-weight: 200;}
+.font-weight-normal      { font-weight: 400;}
+.font-weight-bold        { font-weight: 500;}
+.font-weight-extra-bold  { font-weight: 800;}
+
+.small-text                { font-size: 1rem; }
+.statement-text            { font-size: 1.7rem; }
+.medium-text               { 
+    font-size: 2.5rem; 
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+.big-text                  { font-size: 5rem; }
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #FFF3B0;
+}
+
+.highlight {
+    background-color: rgba(173, 169, 163, 0.5);
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 2px;
+  }
+
+  h2, h3, h4, h5, h6 {
+    line-height: 1;
+    margin-bottom: 0.8rem;
+}
+
+h2  { font-size: 2.2rem;  }
+h3  { font-size: 1.8rem;  }
+h4  { font-size: 1.4rem;  }
+p   { font-size: 1rem;    }
+
+p, ul {
+     margin-bottom: 0.8rem;
+}
+  /* this makes sure that the last element in any container doesn't have margin-bottom */
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+margin-bottom:0;
+}
+
+h2{
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+h3{
+    line-height: 1;
+}
+
+p{
+    font-weight: 200;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover{
+    color:#540B0E;
+}
+
+a span:hover{
+    color:#540B0E;
+}
+
+
+
+/* ---------------- Image Styles ---------------- */
+
+img {
+    max-width: 100%;
+    display: block;
+  }
+
+.bg-image {
+    background-image: url(/images/adventure-alula-dates.jpg);
+    background-size: cover;
+}
+
+.bg-padded { 
+    padding-bottom: 30%; 
+}
+
+.map {
+    min-height: 70vh;
+}
+
+.landscape { padding-bottom: 65%;  }
+.portrait  { padding-bottom: 125%; }
+.square    { padding-bottom: 100%; }
+
+/* ------------------------------- Header Styles ---------------------------- */
+
+/* header {
+    background-image: url("/images/adventure-alula-hegra.jpg");
+    background-size: cover;
+    background-position: center;
+} */
+
+/* header h3 {
+    font-size: 6rem;
+    line-height: 1;
+}
+
+header h1 {
+    margin-bottom: 20rem;
+} */
+
+/* --------------- Background Images ----------------- */
+
+.bg-dates {
+    background-image: url('/images/adventure-alula-dates.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.bg-oranges {
+    background-image: url('/images/adventure-alula-oranges.jpg');
+    background-size: cover;
+}
+
+.bg-palm-tops {
+    background-image: url('/images/adventure-alula-palm-tops.jpg');
+}
+
+.bg-trees-balloon {
+    background-image: url('/images/adventure-alula-trees-balloon-view.jpg');
+}
+
+.bg-close-palm-tops {
+    background-image: url('/images/adventure-alula-close-up-palm-tops.jpg');
+}
+
+.bg-hegra {
+    background-image: url('/images/adventure-alula-hegra.jpg');
+    background-position: 100% 30%;
+}
+
+.bg-hegra-tomb {
+    background-image: url('/images/adventure-alula-hegra-tomb-1.jpg');
+}
+
+.bg-hegra-tomb-naika {
+    background-image: url('/images/adventure-alula-hegra-naika.jpg');
+}
+
+.bg-hegra-landscape {
+    background-image: url('/images/adventure-alula-hegra-tomb-landscape.jpg');
+    background-position: 100% 20%;
+}
+
+.bg-naika-1 {
+    background-image: url('/images/adventure-alula-naika-1.jpg');
+}
+
+.bg-naika-2 {
+    background-image: url('/images/adventure-alula-naika-2.jpg');
+}
+
+.bg-kuza {
+    background-image: url('/images/adventure-alula-kuza-1.jpg');
+}
+
+.bg-naika-1 {
+    background-image: url('/images/adventure-alula-naika-1.jpg');
+}
+
+.bg-old-town {
+    background-image: url('/images/adventure-alula-old-town.jpg');
+    background-position: 45% 55%;
+}
+
+.bg-old-town-alley {
+    background-image: url('/images/adventure-alula-old-town-alley.jpg');
+}
+
+.bg-old-town-deco {
+    background-image: url('/images/adventure-alula-old-town-decoration.jpg');
+}
+
+.bg-acme {
+    background-image: url('/images/adventure-alula-acme.jpg');
+}
+
+.bg-suheil {
+    background-image: url('/images/adventure-alula-suheil.jpg');
+}
+
+.bg-wacafe-1 {
+    background-image: url('/images/adventure-alula-wacafe-1.jpg');
+}
+
+.bg-wacafe {
+    background-image: url('/images/adventure-alula-wacafe.jpg');
+}
+
+.bg-old-town-vc {
+    background-image: url('/images/adventure-alula--old-town-vc.jpg');
+}
+
+.bg-old-town-1 {
+    background-image: url('/images/adventure-alula-old-town-1.jpg');
+    background-size: cover;
+}
+
+.bg-old-town-2 {
+    background-image: url('/images/adventure-alula-old-town-2.jpg');
+    background-size: cover;
+}
+
+.bg-old-town-3 {
+    background-image: url('/images/adventure-alula-old-town-3.jpg');
+    background-size: cover;
+}
+
+.bg-old-town-alley-night {
+    background-image: url('/images/adventure-alula-old-town-alley-night.jpg');
+}
+
+.bg-abu-jameela {
+    background-image: url('/images/adventure-alula-abu-jameela.jpg');
+}
+
+.bg-aljadidah-music {
+    background-image: url('/images/adventure-alula-aljadidah-music.jpg');
+}
+
+.bg-ocircolo-1 {
+    background-image: url('/images/adventure-alula-circolo-1.jpg');
+}
+
+.bg-circolo {
+    background-image: url('/images/adventure-alula-circolo.jpg');
+}
+
+.bg-farm-view-1 {
+    background-image: url('/images/adventure-alula-farm-view-1.jpg');
+}
+
+.bg-farm-view-2 {
+    background-image: url('/images/adventure-alula-farm-view-2.jpg');
+}
+
+.bg-gathering-square {
+    background-image: url('/images/adventure-alula-gathering-square.jpg');
+}
+
+.bg-la-pazzia-1 {
+    background-image: url('/images/adventure-alula-la-pazzia-1.jpg');
+}
+
+.bg-la-pazzia {
+    background-image: url('/images/adventure-alula-la-pazzia.jpg');
+}
+
+.bg-meraki {
+    background-image: url('/images/adventure-alula-meraki.jpg');
+}
+
+.bg-oasis-square-1 {
+    background-image: url('/images/adventure-alula-oasis-square-1.jpg');
+}
+
+.bg-oasis-square {
+    background-image: url('/images/adventure-alula-oasis-square.jpg');
+}
+
+.bg-painting-1 {
+    background-image: url('/images/adventure-alula-painting-1.jpg');
+}
+
+.bg-painting-2 {
+    background-image: url('/images/adventure-alula-painting-2.jpg');
+}
+
+.bg-painting-3 {
+    background-image: url('/images/adventure-alula-painting-3.jpg');
+}
+
+.bg-painting {
+    background-image: url('/images/adventure-alula-painting.jpg');
+}
+
+.bg-somewhere {
+    background-image: url('/images/adventure-alula-somewhere.jpg');
+}
+
+.bg-starbucks {
+    background-image: url('/images/adventure-alula-starbucks.jpg');
+}
+
+.bg-painting-1 {
+    background-image: url('/images/adventure-alula.jpg');
+}
+
+.bg-heritage-trail {
+    background-image: url('/images/adventure-alula-heritage-trail.jpg');
+    background-position: 40% 65%;
+}
+
+.bg-oasis-seats {
+    background-image: url('/images/adventure-alula-oasis-seats.jpg');
+    background-position: 25% 95%;
+}
+
+.bg-oasis-banana-1 {
+    background-image: url('/images/adventure-alula-oasis-banana-1.jpg');
+}
+
+.bg-oasis-banana {
+    background-image: url('/images/adventure-alula-oasis-banana.jpg');
+}
+
+.bg-swing-1 {
+    background-image: url('/images/adventure-alula-oasis-swing-1.jpg');
+    background-size: cover;
+    background-position: 45% 75%;
+}
+
+.bg-swing-2 {
+    background-image: url('/images/adventure-alula-oasis-swing-2.jpg');
+}
+
+.bg-swing-3 {
+    background-image: url('/images/adventure-alula-oasis-swing-3.jpg');
+}
+
+.bg-pk-view {
+    background-image: url('/images/adventure-alula-pk-view.jpg');
+    background-position: 65% 50%;
+}
+
+.bg-doe {
+    background-image: url('/images/adventure-alula-doe.jpg');
+}
+
+.bg-the-exit {
+    background-image: url('/images/adventure-alula-the-exit.jpg');
+}
+
+.bg-tea-manshiyah {
+    background-image: url('/images/adventure-alula-tea-manshiyah.jpg');
+}
+
+.bg-samosa {
+    background-image: url('/images/adventure-alula-samosa.jpg');
+}
+
+.bg-samosa-guy {
+    background-image: url('/images/adventure-alula-samosa-guy.jpg');
+}
+
+.bg-samosa-place {
+    background-image: url('/images/adventure-alula-samosa-place.jpg');
+}
+
+.bg-mandi {
+    background-image: url('/images/adventure-alula-mandi.jpg');
+}
+
+.bg-mandi-place {
+    background-image: url('/images/adventure-alula-mandi-place.jpg');
+}
+
+.bg-mandi-place-inside {
+    background-image: url('/images/adventure-alula-mandi-place-inside.jpg');
+}
+
+.bg-mandi-place-family {
+    background-image: url('/images/adventure-alula-mandi-place-family-entrance.jpg');
+}
+
+.bg-arch-rock {
+    background-image: url('/images/adventure-alula-arch-rock.jpg');
+}
+
+.bg-elephant-rock {
+    background-image: url('/images/adventure-alula-elephant-rock.jpg');
+}
+
+.bg-salt {
+    background-image: url('/images/adventure-alula-salt.jpg');
+}
+
+.bg-hot-air-balloon {
+    background-image: url('/images/adventure-alula-hot-air-balloons.jpg');
+    background-position: 100% 90%;
+}
+
+.bg-red-rug {
+    background-image: url('/images/adventure-alula-red-rug.jpg');
+    background-size: cover;
+}
+
+.bg-blue-rug {
+    background-image: url('/images/adventure-alula-blue-rug.jpg');
+    background-size: cover;
+}
+
+.bg-map {
+    background-image: url('/images/simple-line-map-alula.png');
+    background-position: 20% 80%;
+}
+
+/* ------------------------Card Styles------------------- */
+
+.card {
+    /* background-color: #E09F3E; */
+    color: #2D6E79;
+    padding: 0;
+    /* border-radius: 5%; */
+  }
+
+  .experiences-card {
+    background-color: white;
+    color: black;
+    padding: 0;
+    /* border-radius: 5%; */
+  }
+  
+  .dining-card {
+    background-size: cover;
+    background-position: center;
+    padding: 0.5rem;
+    color: white;
+  }
+
+  .card img {
+    margin-bottom: 2rem;
+    /* border-top-left-radius: 5%;
+    border-top-right-radius: 5%; */
+  }
+
+  .experiences-card img {
+    margin-bottom: 2rem;
+  }
+
+  .card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .card a {
+    display: inline-block;
+  }
+  
+  .card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,.2),0 10px 10px -5px rgba(0,0,0,.2);
+  }
+
+  .experiences-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,.2),0 10px 10px -5px rgba(0,0,0,.2);
+    color: black;
+  }
+  
+
+/* ----------------------- Icon Grid------------------ */
+
+.fas {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+/* --------------------------- Quote Section ------------------ */
+
+.quote-icon {
+    font-size: 6rem;
+    display: inline-block;
+    color: #784D2D;
+    line-height: 1;
+}
+
+/* ------------------------ Buttons & Forms ---------------------- */
+
+input,
+textarea {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.3rem;
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    border: 2px xolid transparent;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid #8aa8b5;
+}
+
+.button {
+    padding: 0.5rem 2rem;
+    background-color: #8aa8b5;
+    appearance: none;
+    border: 2px solid #8aa8b5;
+    color:#383e59;
+}
+
+.button:hover {
+    background-color: #383e59;
+    appearance: none;
+    border: 2px solid #8aa8b5;
+    color:#8aa8b5;
+}
+
+.copyright {
+    font-size:0.5rem;
+}
+
+/* ------------------------ Footer Styles ------------------------ */
+
+/* ------------------------ MISC ------------------------ */
+  /* this is a line element */
+  hr { 
+    border: none;
+    border-bottom: 3px solid;
+    width: 4rem;
+    margin-bottom: 1rem;
+    }
+
+    /* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
+
+.show-xs, 
+.show-sm,
+.show-md {
+	display: none;
+}
+
+/* ------- MD Media Query (64em / 1024px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
+
+
+@media (max-width: 64em) {
+
+    body {
+        border: 2px solid green;
+    }
+
+  html { font-size: 14px;   }
+  p    { font-size: 1.1rem; }
+
+  .show-md { display: block; }
+  .hide-md { display: none;  }
+
+  .md-tall-40 { min-height: 40vh; }
+  .md-tall-50 { min-height: 50vh; }
+  .md-tall-60 { min-height: 60vh; }
+  .md-tall-70 { min-height: 70vh; }
+  .md-tall-80 { min-height: 80vh; }
+  
+}
+
+/* ------- SM Media Query (48em / 768px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 768px, or zoomed in equivalent */ 
+
+@media (max-width: 48em) {
+
+    body {
+        border: 2px solid blue;
+    }
+
+    .show-sm { display: block; }
+    .hide-sm { display: none;  }
+       
+    .sm-text-center { text-align: center; }
+    .sm-text-left   { text-align: left;   }
+    .sm-text-right  { text-align: right;  }
+  
+    .sm-padded    { padding: 5%;     }
+    .sm-padded-1  { padding: 1rem;   }
+    .sm-padded-05 { padding: 0.5rem; }
+    .sm-padded-0  { padding: 0;      }
+
+    .sm-padded-b-2 { padding-bottom: 2rem; }
+    .sm-padded-t-2 { padding-top: 2rem;    }
+  
+    .sm-padded-t-0 { padding-top: 0;    }
+    .sm-padded-b-0 { padding-bottom: 0; }
+    .sm-padded-l-0 { padding-left: 0;   }
+    .sm-padded-r-0 { padding-right: 0;  }
+    
+    .sm-margin-t-0 { margin-top: 0;    }
+    .sm-margin-b-0 { margin-bottom: 0; }
+    .sm-margin-l-0 { margin-left: 0;   }
+    .sm-margin-r-0 { margin-right: 0;  }
+
+    .sm-tall-40 { min-height: 40vh; }
+    .sm-tall-50 { min-height: 50vh; }
+    .sm-tall-60 { min-height: 60vh; }
+    .sm-tall-70 { min-height: 70vh; }
+    .sm-tall-80 { min-height: 80vh; }
+
+    .sm-align-center { justify-content: center; }
+
+    .sm-highlight {
+        background-color: rgba(163, 169, 173, .5);
+        display: inline-block;
+        padding: 0.2rem;
+        margin: 0;
+      }
+
+    .sm-white-text {color:white;}
+
+    .logo h2 { font-size: 2rem; }
+
+    header h3 {
+        font-size: 11vw;
+    }
+  }
+  
+  /* ------- XS Media Query (36em / 576px) --------------- */ 
+  /* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
+  
+  @media (max-width: 36em) {
+
+    body {
+        border: 2px solid lightblue;
+    }
+
+    .show-xs { display: block; }
+    .hide-xs { display: none;  }
+
+    .xs-tall-40 { min-height: 40vh; }
+    .xs-tall-50 { min-height: 50vh; }
+    .xs-tall-60 { min-height: 60vh; }
+    .xs-tall-70 { min-height: 70vh; }
+    .xs-tall-80 { min-height: 80vh; }
+
+    .horizontal-scroll {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 7%;
+      }
+      
+      /* .card {
+          border-radius: 5%;
+      } */
+
+      .card img {
+      margin-top: 0;
+      /* border-top-left-radius: 5%;
+      border-top-right-radius: 5%; */
+     
+      }
+      
+      .mob-padded-0 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .mob-padded-r-2 {
+        padding-right: 2rem;
+      }
+
+      .mob-padded-l-2 {
+        padding-left: 2rem;
+      }
+    
+
+    h1 {
+        font-size: 1.4rem;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .latest-news {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+  }
